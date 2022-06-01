@@ -1,21 +1,21 @@
 import {Contract, ContractInterface, ethers, Signer} from "ethers"
 import web3 from 'web3'
 
-import testnetAi, {
-    address as testnetAiAddress,
-    productionAddress as productionAiAddress,
-} from "../contracts/testnetAi"
-import Web3 from "web3"
+// import abiMerkel, {
+//     address as testnetMerkelAddress,
+//     productionAddress as productionMerkelAddress,
+// } from "../contracts/contractMerkle"
+// import Web3 from "web3"
 import {Account, AccountType, Status} from "use-wallet/dist/cjs/types";
 
 
-export const isTestNet = false
+export const isTestNet = true
 const bscUrl = isTestNet
     ? "https://data-seed-prebsc-1-s1.binance.org:8545/"
     : "https://bsc-dataseed1.defibit.io/"
 const bscChainId = isTestNet ? 97 : 56
 
-const AIAddress = isTestNet ? testnetAiAddress : productionAiAddress
+// const MerkelAddress = isTestNet ? testnetMerkelAddress : productionMerkelAddress
 
 type TypeExternalProvider = any
 type TypePropExternalProvider = TypeExternalProvider | null
@@ -71,14 +71,15 @@ const createSignerContract = (
     return {signer, contract, signTransactions, provider}
 }
 
-export const getPepeAiPrice = async (
+export const mintNft = async (
     address: string,
-    activeProvider: TypePropExternalProvider
+    activeProvider: TypePropExternalProvider,
+    proof: any,
+    valueAmountNft: number
 ) => {
     try {
-        // const {contract} = createSignerContract(PrisonAddress, testnetPrison, activeProvider)
-        // const price = await contract.pepeAiPrice()
-        // return ethers.utils.formatEther(price)
+        // const {signTransactions} = createSignerContract(MerkelAddress, abiMerkel, activeProvider)
+        // return await signTransactions.safeMint(proof, valueAmountNft, { value: ethers.utils.parseEther(String(valueAmountNft * 0.02)) })
     } catch (e) {
         return e
     }
