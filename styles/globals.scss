@@ -34,17 +34,23 @@
   position: relative;
   overflow: hidden;
 
+
+  @media (min-width: 1400px) {
+    background: url('/images/background.jpg') no-repeat left top / cover;
+    height: 1024px;
+  }
+
   @media (min-width: 1728px) {
-    height: 1100px;
+    height: 972px;
   }
 
   .poster {
     display: none;
     position: absolute;
-    left: 380px;
-    top: 380px;
+    left: 400px;
+    top: 440px;
 
-    @media (min-width: 1600px) {
+    @media (min-width: 1400px) {
       display: block;
     }
   }
@@ -63,12 +69,18 @@
       width: 710px;
     }
 
+    @media (min-width: 1400px) {
+      width: 579px;
+      left: auto;
+      right: 82px;
+      top: 221px;
+      transform: none;
+    }
+
     @media (min-width: 1600px) {
       width: 791px;
-      left: auto;
       right: 164px;
       top: 53px;
-      transform: none;
     }
   }
 
@@ -85,11 +97,16 @@
       transform: translateX(-55%);
     }
 
+    @media (min-width: 1400px) {
+      width: 626px;
+      left: auto;
+      right: 59px;
+      transform: none;
+    }
+
     @media (min-width: 1600px) {
       width: 900px;
-      left: auto;
       right: -35px;
-      transform: none;
     }
   }
 
@@ -99,7 +116,7 @@
     align-items: center;
     margin-top: 15px;
 
-    @media (min-width: 1600px) {
+    @media (min-width: 1400px) {
       position: absolute;
       top: 17%;
       left: 2%;
@@ -176,8 +193,7 @@
     z-index: 30;
     margin: 47px auto 0;
 
-
-    @media (min-width: 1600px) {
+    @media (min-width: 1400px) {
       display: none;
     }
   }
@@ -188,6 +204,7 @@
     flex-flow: column nowrap;
     align-items: center;
     margin-top: 100px;
+    user-select: none;
 
     @media (min-width: 834px) {
       flex-flow: row nowrap;
@@ -205,6 +222,7 @@
   }
 
   &__item {
+    user-select: none;
     min-width: 285px!important;
     width: 285px!important;
     height: 285px!important;

@@ -5,9 +5,7 @@ import Slider from './Slider'
 
 const Gallery = () => {
     const [offsetY, setOffsetY] = useState(0)
-    // const [offsetY, setOffsetY] = useState(0)
     const handlerScroll = () => setOffsetY(window.scrollY)
-    const handlerScroll2 = () => setOffsetY(window.scrollY)
     const [isMobile, setIsMobile] = useState(true)
 
     useEffect(() => {
@@ -33,7 +31,7 @@ const Gallery = () => {
             <img
                 style={{
                     transition: 'transform .1s linear',
-                    transform: `translate(${isMobile ? '0' : '-50%'}, ${offsetY * -0.1 + 'px'})`
+                    transform: `translate(${isMobile ? '0' : '-50%'}, ${offsetY * (isMobile ? -0.05 : -0.1) + 'px'})`
                 }}
                 className='gallery__grass-2'
                 src="/images/full-grass-2.png"

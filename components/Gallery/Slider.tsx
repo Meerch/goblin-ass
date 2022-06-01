@@ -1,13 +1,27 @@
 import React, {useEffect, useState} from 'react'
-import {Swiper, SwiperSlide} from "swiper/react";
+import {Swiper, SwiperSlide, useSwiper} from "swiper/react";
+import {Autoplay} from "swiper";
+import {delay} from "rxjs/operators";
+
 
 const Slider = () => {
     const [isMobile, setIsMobile] = useState(true)
+    const swiper = useSwiper()
 
     useEffect(() => {
         if (window !== undefined && window) {
             const widthScreen = window.screen.width
             setIsMobile(widthScreen < 834)
+
+            swiper?.autoplay?.start()
+
+            // const timer = setInterval(() => {
+            //     swiper?.slideNext()
+            // }, 1000)
+            //
+            // return () => {
+            //     clearInterval(timer)
+            // }
         }
     }, [])
 
@@ -37,6 +51,16 @@ const Slider = () => {
     } else {
         return (
             <Swiper
+                modules={[Autoplay]}
+                autoplay={{
+                    delay: 1000,
+                    disableOnInteraction: false,
+                    pauseOnMouseEnter: true
+                }}
+
+                loop={true}
+                loopedSlides={8}
+                // rewind={true}
                 slidesPerView='auto'
                 className='gallery__items'
             >
