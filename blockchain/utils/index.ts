@@ -85,11 +85,12 @@ export const mintNft = async (
 
 
 export const checkAmountAvailableMintNft = async (
+    address: string,
     activeProvider: TypePropExternalProvider
 ) => {
     try {
         const {contract} = createContract(addressGat, abiGat, activeProvider)
-        return +(await contract.remainToMint())
+        return +(await contract.remainToMint(address))
     } catch (e) {
         console.log('error', e)
         return 0

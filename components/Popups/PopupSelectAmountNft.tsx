@@ -13,7 +13,7 @@ const PopupSelectAmountNft: React.FC<PopupSelectAmountNftProps> = ({onSuccess}) 
 
     const onChangeAmountNft = (e: React.ChangeEvent<HTMLInputElement>) => {
         const amount = +(e.target.value)
-        if (amount >= 0 && amount < 11 && amount <= maxAvailableAmount) {
+        if (amount >= 0 && amount <= maxAvailableAmount) {
             setAmountNft(String(amount))
         }
     }
@@ -23,7 +23,7 @@ const PopupSelectAmountNft: React.FC<PopupSelectAmountNftProps> = ({onSuccess}) 
             return
         }
         console.log('call check')
-        const amount = await checkAmountAvailableMintNft(wallet.ethereum)
+        const amount = await checkAmountAvailableMintNft(wallet.account, wallet.ethereum)
         setMaxAvailableAmount(amount)
     }
 
@@ -33,13 +33,13 @@ const PopupSelectAmountNft: React.FC<PopupSelectAmountNftProps> = ({onSuccess}) 
 
     const calcAmountNft = (value: number) => {
         const newAmountNft = +amountNft + value
-        if (newAmountNft >= 0 && newAmountNft < 11 && newAmountNft <= maxAvailableAmount) {
+        if (newAmountNft >= 0 && newAmountNft <= maxAvailableAmount) {
             setAmountNft(String(newAmountNft))
         }
     }
 
     const onMintNft = async () => {
-        if (!wallet.account || !wallet.ethereum) {
+        if (!wallet.account || !wallet.ethereum || +amountNft === 0 || +maxAvailableAmount === 0) {
             return
         }
         const resultMint = await mintNft(wallet.account, wallet.ethereum, +amountNft)
@@ -54,7 +54,7 @@ const PopupSelectAmountNft: React.FC<PopupSelectAmountNftProps> = ({onSuccess}) 
             <div className='popup__title'>
                 Mint is <span className='popup__title-mark'>live</span>
             </div>
-            <div className="popup__description">Choose how many asses you want (max 10)</div>
+            <div className="popup__description">Choose how many asses you want (max 5)</div>
 
             <div className="popup__form">
                 <img

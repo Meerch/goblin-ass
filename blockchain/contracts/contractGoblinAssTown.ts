@@ -1,9 +1,20 @@
-export const address = "0x0Ab2E652025A51271230D7C20052e27737cF26cA"
-export const productionAddress = "0x0Ab2E652025A51271230D7C20052e27737cF26cA"
+export const address = "0x1051A60FFae7f1867Dd9829C203829eb84EbF7bb"
+export const productionAddress = "0x1051A60FFae7f1867Dd9829C203829eb84EbF7bb"
 
 const abi = [
     {
-        inputs: [],
+        inputs: [
+            {
+                internalType: "string",
+                name: "_revealURI",
+                type: "string"
+            },
+            {
+                internalType: "uint256",
+                name: "_startSale",
+                type: "uint256"
+            }
+        ],
         stateMutability: "nonpayable",
         type: "constructor"
     },
@@ -164,6 +175,25 @@ const abi = [
         anonymous: false,
         inputs: [
             {
+                indexed: false,
+                internalType: "bool",
+                name: "status",
+                type: "bool"
+            },
+            {
+                indexed: false,
+                internalType: "uint256",
+                name: "time",
+                type: "uint256"
+            }
+        ],
+        name: "RevealMetadata",
+        type: "event"
+    },
+    {
+        anonymous: false,
+        inputs: [
+            {
                 indexed: true,
                 internalType: "address",
                 name: "from",
@@ -212,6 +242,13 @@ const abi = [
         type: "function"
     },
     {
+        inputs: [],
+        name: "Reveal",
+        outputs: [],
+        stateMutability: "nonpayable",
+        type: "function"
+    },
+    {
         inputs: [
             {
                 internalType: "address",
@@ -251,6 +288,24 @@ const abi = [
     {
         inputs: [
             {
+                internalType: "uint256[]",
+                name: "tokenIds",
+                type: "uint256[]"
+            },
+            {
+                internalType: "address[]",
+                name: "users",
+                type: "address[]"
+            }
+        ],
+        name: "batchTransfer",
+        outputs: [],
+        stateMutability: "nonpayable",
+        type: "function"
+    },
+    {
+        inputs: [
+            {
                 internalType: "uint256",
                 name: "newLimit",
                 type: "uint256"
@@ -276,7 +331,7 @@ const abi = [
     },
     {
         inputs: [],
-        name: "flipStatus",
+        name: "flipSaleStatus",
         outputs: [],
         stateMutability: "nonpayable",
         type: "function"
@@ -314,6 +369,19 @@ const abi = [
             }
         ],
         name: "isApprovedForAll",
+        outputs: [
+            {
+                internalType: "bool",
+                name: "",
+                type: "bool"
+            }
+        ],
+        stateMutability: "view",
+        type: "function"
+    },
+    {
+        inputs: [],
+        name: "isMintOpen",
         outputs: [
             {
                 internalType: "bool",
@@ -382,6 +450,11 @@ const abi = [
                 internalType: "uint256",
                 name: "amount",
                 type: "uint256"
+            },
+            {
+                internalType: "address",
+                name: "promoWallet",
+                type: "address"
             }
         ],
         name: "ownerMint",
@@ -409,7 +482,13 @@ const abi = [
         type: "function"
     },
     {
-        inputs: [],
+        inputs: [
+            {
+                internalType: "address",
+                name: "butt",
+                type: "address"
+            }
+        ],
         name: "remainToMint",
         outputs: [
             {
@@ -506,6 +585,19 @@ const abi = [
             }
         ],
         name: "setCollectionURI",
+        outputs: [],
+        stateMutability: "nonpayable",
+        type: "function"
+    },
+    {
+        inputs: [
+            {
+                internalType: "string",
+                name: "newURI",
+                type: "string"
+            }
+        ],
+        name: "setRevealURI",
         outputs: [],
         stateMutability: "nonpayable",
         type: "function"
