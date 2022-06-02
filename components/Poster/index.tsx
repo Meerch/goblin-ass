@@ -1,13 +1,13 @@
 import React, {useEffect, useState} from 'react'
 
 const Poster = () => {
-    const [isLock, setIsLock] = useState(false)
+    const [isLock, setIsLock] = useState(true)
 
-    // useEffect(() => {
-    //     const dateNow = new Date()
-    //     const dateMint = new Date(2022, 5, 3, 2)
-    //     setIsLock(dateNow < dateMint)
-    // }, [])
+    useEffect(() => {
+        const dateNow = new Date()
+        const dateMint = new Date(2022, 5, 3, 2)
+        setIsLock(dateNow < dateMint)
+    }, [])
 
     return (
         <div className='poster'>
