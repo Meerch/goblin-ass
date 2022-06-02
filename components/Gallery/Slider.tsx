@@ -5,7 +5,7 @@ import {v4 as randomKey} from 'uuid'
 
 const nfts = [
     '/images/nfts/1.jpg',
-    '/images/nfts/2.jpg',
+    '/images/nfts/2.png',
     '/images/nfts/3.jpg',
     '/images/nfts/4.jpg',
     '/images/nfts/5.jpg',
@@ -23,7 +23,7 @@ const nfts = [
     '/images/nfts/17.png',
     '/images/nfts/18.png',
     '/images/nfts/19.png',
-    '/images/nfts/20.png',
+    '/images/nfts/20.jpg',
     '/images/nfts/21.png',
     '/images/nfts/22.png',
     '/images/nfts/23.png',
