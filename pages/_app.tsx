@@ -21,6 +21,7 @@ function MyApp({Component, pageProps}: AppProps) {
     return <>
         <Head>
             <title>Goblins Ass</title>
+            <link rel='shortcut icon' href='/favicon.ico'/>
         </Head>
 
         <UseWalletProvider

@@ -1,11 +1,10 @@
 import {Contract, ContractInterface, ethers, Signer} from "ethers"
 import web3 from 'web3'
 
-// import abiMerkel, {
-//     address as testnetMerkelAddress,
-//     productionAddress as productionMerkelAddress,
-// } from "../contracts/contractMerkle"
-// import Web3 from "web3"
+import abiGat, {
+    address as testnetGatAddress,
+    productionAddress as productionGatAddress,
+} from "../contracts/contractGoblinAssTown"
 import {Account, AccountType, Status} from "use-wallet/dist/cjs/types";
 
 
@@ -15,7 +14,7 @@ const bscUrl = isTestNet
     : "https://bsc-dataseed1.defibit.io/"
 const bscChainId = isTestNet ? 97 : 56
 
-// const MerkelAddress = isTestNet ? testnetMerkelAddress : productionMerkelAddress
+const addressGat = isTestNet ? testnetGatAddress : productionGatAddress
 
 type TypeExternalProvider = any
 type TypePropExternalProvider = TypeExternalProvider | null
@@ -74,13 +73,27 @@ const createSignerContract = (
 export const mintNft = async (
     address: string,
     activeProvider: TypePropExternalProvider,
-    proof: any,
-    valueAmountNft: number
+    amountNft: number
 ) => {
     try {
-        // const {signTransactions} = createSignerContract(MerkelAddress, abiMerkel, activeProvider)
-        // return await signTransactions.safeMint(proof, valueAmountNft, { value: ethers.utils.parseEther(String(valueAmountNft * 0.02)) })
+        const {signTransactions} = createSignerContract(addressGat, abiGat, activeProvider)
+        return await signTransactions.EnterTheHole(amountNft)
     } catch (e) {
         return e
+    }
+}
+
+
+export const checkAmountAvailableMintNft = async (
+    activeProvider: TypePropExternalProvider
+) => {
+    try {
+        const {contract} = createContract(addressGat, abiGat, activeProvider)
+        const res = await contract.remainToMint()
+        console.log('res', res)
+        return res
+    } catch (e) {
+        console.log('error', e)
+        return 0
     }
 }

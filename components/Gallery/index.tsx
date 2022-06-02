@@ -1,9 +1,14 @@
 import React, {useEffect, useState} from 'react'
+import {TypeWallet} from '../../blockchain/utils'
 import Poster from '../Poster'
-import {Swiper, SwiperSlide} from 'swiper/react'
 import Slider from './Slider'
 
-const Gallery = () => {
+interface GalleryProps {
+    wallet: TypeWallet
+}
+
+
+const Gallery: React.FC<GalleryProps> = ({wallet}) => {
     const [offsetY, setOffsetY] = useState(0)
     const handlerScroll = () => setOffsetY(window.scrollY)
     const [isMobile, setIsMobile] = useState(true)
@@ -39,73 +44,10 @@ const Gallery = () => {
             />
 
             <Poster/>
-            <Slider />
-
-            {/*<Swiper*/}
-            {/*    slidesPerView='auto'*/}
-            {/*    className='gallery__items'*/}
-            {/*    onSlideChange={() => console.log('slide change')}*/}
-            {/*    onSwiper={(swiper) => console.log(swiper)}*/}
-            {/*>*/}
-            {/*    <div className="swiper-wrapper">*/}
-            {/*        <SwiperSlide className="gallery__item">*/}
-            {/*            <img className="gallery__item-border" src='/images/border-nft-gallery.png'/>*/}
-            {/*            <img className="gallery__item-image" src='/images/nfts/1.jpg'/>*/}
-            {/*        </SwiperSlide>*/}
-            {/*        <SwiperSlide className="gallery__item">*/}
-            {/*            <img className="gallery__item-border" src='/images/border-nft-gallery.png'/>*/}
-            {/*            <img className="gallery__item-image" src='/images/nfts/2.jpg'/>*/}
-            {/*        </SwiperSlide>*/}
-            {/*        <SwiperSlide className="gallery__item">*/}
-            {/*            <img className="gallery__item-border" src='/images/border-nft-gallery.png'/>*/}
-            {/*            <img className="gallery__item-image" src='/images/nfts/3.jpg'/>*/}
-            {/*        </SwiperSlide>*/}
-            {/*        <SwiperSlide className="gallery__item">*/}
-            {/*            <img className="gallery__item-border" src='/images/border-nft-gallery.png'/>*/}
-            {/*            <img className="gallery__item-image" src='/images/nfts/4.jpg'/>*/}
-            {/*        </SwiperSlide>*/}
-            {/*        <SwiperSlide className="gallery__item">*/}
-            {/*            <img className="gallery__item-border" src='/images/border-nft-gallery.png'/>*/}
-            {/*            <img className="gallery__item-image" src='/images/nfts/5.jpg'/>*/}
-            {/*        </SwiperSlide>*/}
-            {/*        <SwiperSlide className="gallery__item">*/}
-            {/*            <img className="gallery__item-border" src='/images/border-nft-gallery.png'/>*/}
-            {/*            <img className="gallery__item-image" src='/images/nfts/5.jpg'/>*/}
-            {/*        </SwiperSlide>*/}
-            {/*        <SwiperSlide className="gallery__item">*/}
-            {/*            <img className="gallery__item-border" src='/images/border-nft-gallery.png'/>*/}
-            {/*            <img className="gallery__item-image" src='/images/nfts/5.jpg'/>*/}
-            {/*        </SwiperSlide>*/}
-            {/*        <SwiperSlide className="gallery__item">*/}
-            {/*            <img className="gallery__item-border" src='/images/border-nft-gallery.png'/>*/}
-            {/*            <img className="gallery__item-image" src='/images/nfts/5.jpg'/>*/}
-            {/*        </SwiperSlide>*/}
-            {/*    </div>*/}
-            {/*</Swiper>*/}
-            {/*<div className="gallery__items">*/}
-            {/*    <div className="gallery__item">*/}
-            {/*        <img className="gallery__item-border" src='/images/border-nft-gallery.png'/>*/}
-            {/*        <img className="gallery__item-image" src='/images/nfts/1.jpg'/>*/}
-            {/*    </div>*/}
-            {/*    <div className="gallery__item">*/}
-            {/*        <img className="gallery__item-border" src='/images/border-nft-gallery.png'/>*/}
-            {/*        <img className="gallery__item-image" src='/images/nfts/2.jpg'/>*/}
-            {/*    </div>*/}
-            {/*    <div className="gallery__item">*/}
-            {/*        <img className="gallery__item-border" src='/images/border-nft-gallery.png'/>*/}
-            {/*        <img className="gallery__item-image" src='/images/nfts/3.jpg'/>*/}
-            {/*    </div>*/}
-            {/*    <div className="gallery__item">*/}
-            {/*        <img className="gallery__item-border" src='/images/border-nft-gallery.png'/>*/}
-            {/*        <img className="gallery__item-image" src='/images/nfts/4.jpg'/>*/}
-            {/*    </div>*/}
-            {/*    <div className="gallery__item">*/}
-            {/*        <img className="gallery__item-border" src='/images/border-nft-gallery.png'/>*/}
-            {/*        <img className="gallery__item-image" src='/images/nfts/5.jpg'/>*/}
-            {/*    </div>*/}
-            {/*</div>*/}
+            <Slider/>
         </section>
     )
 }
+
 
 export default Gallery
