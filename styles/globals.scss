@@ -193,6 +193,7 @@
     .box-for-sound {
       position: absolute;
       z-index: 200;
+      cursor: pointer;
 
       &.left {
         left: 20%;

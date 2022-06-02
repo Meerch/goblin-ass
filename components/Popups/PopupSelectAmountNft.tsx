@@ -18,18 +18,18 @@ const PopupSelectAmountNft: React.FC<PopupSelectAmountNftProps> = ({onSuccess}) 
         }
     }
 
-    // const checkAvailableAmount = async () => {
-    //     if (!wallet.account || !wallet.ethereum) {
-    //         return
-    //     }
-    //     console.log('call check')
-    //     const amount = await checkAmountAvailableMintNft(wallet.ethereum)
-    //     setMaxAvailableAmount(amount)
-    // }
-    //
-    // useEffect(() => {
-    //     void checkAvailableAmount()
-    // }, [])
+    const checkAvailableAmount = async () => {
+        if (!wallet.account || !wallet.ethereum) {
+            return
+        }
+        console.log('call check')
+        const amount = await checkAmountAvailableMintNft(wallet.ethereum)
+        setMaxAvailableAmount(amount)
+    }
+
+    useEffect(() => {
+        void checkAvailableAmount()
+    }, [])
 
     const calcAmountNft = (value: number) => {
         const newAmountNft = +amountNft + value

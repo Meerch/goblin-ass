@@ -12,7 +12,7 @@ const Poster = () => {
                 Mint Price: <span className="poster__text-mark green">Free</span>
             </div>
             <div className="poster__text el limit">
-                Mint Limit: <span className="poster__text-mark red">10</span> per<br/>wallet
+                Mint Limit: <span className="poster__text-mark red">5</span> per<br/>wallet
             </div>
             <div className="poster__text el supply">
                 Max Supply: 8888
