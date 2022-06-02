@@ -1,7 +1,7 @@
-import React, {useState} from 'react'
+import React, {useEffect, useState} from 'react'
 import Poster from '../Poster'
 import {useWallet} from "use-wallet";
-import useSounds from '../../hooks/useSounds';
+import useSounds from '../../hooks/useSounds'
 
 interface IntroProps {
     changePopup: (typePopup: string) => void
@@ -11,6 +11,7 @@ const Intro: React.FC<IntroProps> = ({changePopup}) => {
     const wallet = useWallet()
     const [currentSound, setCurrentSound] = useState(0)
     const [isActiveSound, setIsActiveSound] = useState(false)
+    const [isLock, setIsLock] = useState(true)
     const {
         playSoundPukane1,
         playSoundPukane2,
@@ -50,23 +51,31 @@ const Intro: React.FC<IntroProps> = ({changePopup}) => {
         }
     }
 
+    useEffect(() => {
+        const dateNow = new Date()
+        const dateMint = new Date(2022, 5, 3, 2)
+        setIsLock(dateNow < dateMint)
+    }, [])
+
     return (
         <header className='intro'>
             <Poster/>
             {
-                wallet.account && wallet.ethereum
-                    ? <img
-                        onClick={() => changePopup('mint')}
-                        className='intro__mint intro__element'
-                        src="/images/mint-button.png"
-                        alt="logo"
-                    />
-                    : <img
-                        onClick={() => changePopup('connect')}
-                        className='intro__connect intro__element'
-                        src="/images/connect-button.png"
-                        alt="logo"
-                    />
+                !isLock && (
+                    wallet.account && wallet.ethereum
+                        ? <img
+                            onClick={() => changePopup('mint')}
+                            className='intro__mint intro__element'
+                            src="/images/mint-button.png"
+                            alt="logo"
+                        />
+                        : <img
+                            onClick={() => changePopup('connect')}
+                            className='intro__connect intro__element'
+                            src="/images/connect-button.png"
+                            alt="logo"
+                        />
+                )
             }
             <img
                 className='intro__logo intro__element'

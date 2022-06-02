@@ -1,5 +1,5 @@
 export const address = "0x2d2CDA0056928b2d3dd1FB12433D9fD6c0a9791C"
-export const productionAddress = "0x2d2CDA0056928b2d3dd1FB12433D9fD6c0a9791C"
+export const productionAddress = "0x22E211034214edEab1D21BA50A85a43AB70e2728"
 
 const abi = [
     {
