@@ -1,5 +1,5 @@
-export const address = "0x1051A60FFae7f1867Dd9829C203829eb84EbF7bb"
-export const productionAddress = "0x1051A60FFae7f1867Dd9829C203829eb84EbF7bb"
+export const address = "0x1b72716e085C3391f13294c0BD8B0C6008507888"
+export const productionAddress = "0x1b72716e085C3391f13294c0BD8B0C6008507888"
 
 const abi = [
     {
@@ -242,7 +242,13 @@ const abi = [
         type: "function"
     },
     {
-        inputs: [],
+        inputs: [
+            {
+                internalType: "string",
+                name: "_collectionURI",
+                type: "string"
+            }
+        ],
         name: "Reveal",
         outputs: [],
         stateMutability: "nonpayable",
