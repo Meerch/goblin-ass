@@ -22,7 +22,6 @@ const PopupSelectAmountNft: React.FC<PopupSelectAmountNftProps> = ({onSuccess}) 
         if (!wallet.account || !wallet.ethereum) {
             return
         }
-        console.log('call check')
         const amount = await checkAmountAvailableMintNft(wallet.account, wallet.ethereum)
         setMaxAvailableAmount(amount)
     }
@@ -43,7 +42,7 @@ const PopupSelectAmountNft: React.FC<PopupSelectAmountNftProps> = ({onSuccess}) 
             return
         }
         const resultMint = await mintNft(wallet.account, wallet.ethereum, +amountNft)
-        console.log(resultMint)
+
         if (resultMint?.hash) {
             onSuccess(+amountNft)
         }
@@ -51,9 +50,10 @@ const PopupSelectAmountNft: React.FC<PopupSelectAmountNftProps> = ({onSuccess}) 
 
     return (
         <div className='popup popup__select-amount'>
-            <div className='popup__title'>
-                Mint is <span className='popup__title-mark'>live</span>
-            </div>
+            {/*<div className='popup__title'>*/}
+            {/*    Mint is <span className='popup__title-mark'>live</span>*/}
+            {/*</div>*/}
+            <img className='popup__title' src="/images/mint-is-live.png" alt="Mint is LIVE"/>
             <div className="popup__description">Choose how many asses you want (max 5)</div>
 
             <div className="popup__form">

@@ -428,14 +428,16 @@
   }
 
   &__select-amount {
-    width: 260px;
-    height: 325px;
+    //width: 260px;
+    //height: 325px;
+    width: 430px;
+    height: 535px;
     background: url('/images/popup-background.png') no-repeat center center / cover;
     text-align: center;
 
     & .popup {
       &__title {
-        margin-top: 40px;
+        margin-top: 25px;
         color: #000;
         font-size: 20px;
         letter-spacing: calc(20px - 8%);
@@ -447,10 +449,9 @@
       }
 
       &__description {
-        font-size: 12px;
+        font-size: 20px;
         color: #000;
-        letter-spacing: calc(20px - 8%);
-        width: 90%;
+        width: 80%;
         margin: 20px auto 0;
       }
 
@@ -471,9 +472,9 @@
         }
 
         &-input {
-          margin: 0 14px;
-          width: 51px;
-          height: 52px;
+          margin: 0 25px;
+          width: 84px;
+          height: 84px;
           border-radius: 17px;
           border: 3px #000 solid;
           background-color: #ededed;
@@ -486,7 +487,7 @@
             border: none;
             outline: none;
             text-align: center;
-            font-size: 17px;
+            font-size: 33px;
             letter-spacing: calc(20px - 8%);
 
 
@@ -500,17 +501,17 @@
       }
 
       &__available {
-        font-size: 12px;
+        font-size: 16px;
         color: #000;
-        margin-top: 10px;
+        margin-top: 15px;
         letter-spacing: calc(20px - 8%);
       }
 
       &__mint {
         cursor: pointer;
-        width: 120px;
-        height: 52px;
-        margin: 14px auto 0;
+        width: 200px;
+        height: 85px;
+        margin: 25px auto 0;
       }
 
 
@@ -518,8 +519,10 @@
   }
 
   &__success-mint {
-    width: 260px;
-    height: 325px;
+    //width: 260px;
+    //height: 325px;
+    width: 430px;
+    height: 535px;
     background: url('/images/popup-background.png') no-repeat center center / cover;
     text-align: center;
     color: #7AC28F;
@@ -533,22 +536,26 @@
     & .popup {
 
       &__image {
-        margin: 25px auto 0;
+        margin: 70px auto 0;
+        width: 220px;
+        height: 170px;
       }
 
       &__title {
         font-size: 20px;
-        margin-top: 14px;
+        margin-top: 33px;
       }
 
       &__info {
         color: #FFA9A4;
         width: 90%;
-        margin: 10px auto 0;
+        margin: 40px auto 0;
+        font-size: 22px;
       }
 
       &__description {
-        margin-top: 10px;
+        margin: 40px auto 0;
+        width: 80%;
       }
 
     }
