@@ -63,18 +63,24 @@ const Intro: React.FC<IntroProps> = ({changePopup}) => {
             {
                 !isLock && (
                     wallet.account && wallet.ethereum
-                        ? <img
-                            onClick={() => changePopup('mint')}
-                            className='intro__mint intro__element'
-                            src="/images/mint-button.png"
-                            alt="logo"
-                        />
-                        : <img
-                            onClick={() => changePopup('connect')}
-                            className='intro__connect intro__element'
-                            src="/images/connect-button.png"
-                            alt="logo"
-                        />
+                    && <img
+                        onClick={() => changePopup('connect')}
+                        className='intro__connect intro__element'
+                        src="/images/connect-button.png"
+                        alt="logo"
+                    />
+                    // ? <img
+                    //     onClick={() => changePopup('mint')}
+                    //     className='intro__mint intro__element'
+                    //     src="/images/mint-button.png"
+                    //     alt="logo"
+                    // />
+                    // : <img
+                    //     onClick={() => changePopup('connect')}
+                    //     className='intro__connect intro__element'
+                    //     src="/images/connect-button.png"
+                    //     alt="logo"
+                    // />
                 )
             }
             <img
