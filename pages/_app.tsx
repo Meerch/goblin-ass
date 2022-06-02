@@ -13,9 +13,9 @@ import { isTestNet } from '../blockchain/utils'
 
 
 const bscUrl = isTestNet
-    ? "https://data-seed-prebsc-1-s1.binance.org:8545/"
-    : "https://bsc-dataseed1.defibit.io/"
-const bscChainId = isTestNet ? 97 : 56
+    ? "https://rinkeby.infura.io/v3/"
+    : "https://api.mycryptoapi.com/eth"
+const bscChainId = isTestNet ? 4 : 1
 
 function MyApp({Component, pageProps}: AppProps) {
     return <>
