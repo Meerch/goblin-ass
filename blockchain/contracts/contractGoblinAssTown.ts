@@ -1,5 +1,5 @@
-export const address = "0x1b72716e085C3391f13294c0BD8B0C6008507888"
-export const productionAddress = "0x1b72716e085C3391f13294c0BD8B0C6008507888"
+export const address = "0x2d2CDA0056928b2d3dd1FB12433D9fD6c0a9791C"
+export const productionAddress = "0x2d2CDA0056928b2d3dd1FB12433D9fD6c0a9791C"
 
 const abi = [
     {
@@ -19,67 +19,67 @@ const abi = [
         type: "constructor"
     },
     {
-        inputs: [],
+        inputs: [ ],
         name: "ApprovalCallerNotOwnerNorApproved",
         type: "error"
     },
     {
-        inputs: [],
+        inputs: [ ],
         name: "ApprovalQueryForNonexistentToken",
         type: "error"
     },
     {
-        inputs: [],
+        inputs: [ ],
         name: "ApprovalToCurrentOwner",
         type: "error"
     },
     {
-        inputs: [],
+        inputs: [ ],
         name: "ApproveToCaller",
         type: "error"
     },
     {
-        inputs: [],
+        inputs: [ ],
         name: "BalanceQueryForZeroAddress",
         type: "error"
     },
     {
-        inputs: [],
+        inputs: [ ],
         name: "MintToZeroAddress",
         type: "error"
     },
     {
-        inputs: [],
+        inputs: [ ],
         name: "MintZeroQuantity",
         type: "error"
     },
     {
-        inputs: [],
+        inputs: [ ],
         name: "OwnerQueryForNonexistentToken",
         type: "error"
     },
     {
-        inputs: [],
+        inputs: [ ],
         name: "TransferCallerNotOwnerNorApproved",
         type: "error"
     },
     {
-        inputs: [],
+        inputs: [ ],
         name: "TransferFromIncorrectOwner",
         type: "error"
     },
     {
-        inputs: [],
+        inputs: [ ],
         name: "TransferToNonERC721ReceiverImplementer",
         type: "error"
     },
     {
-        inputs: [],
+        inputs: [ ],
         name: "TransferToZeroAddress",
         type: "error"
     },
     {
-        inputs: [],
+        inputs: [ ],
         name: "URIQueryForNonexistentToken",
         type: "error"
     },
@@ -216,7 +216,7 @@ const abi = [
         type: "event"
     },
     {
-        inputs: [],
+        inputs: [ ],
         name: "COLLECTION_SIZE",
         outputs: [
             {
@@ -237,7 +237,7 @@ const abi = [
             }
         ],
         name: "EnterTheHole",
-        outputs: [],
+        outputs: [ ],
         stateMutability: "nonpayable",
         type: "function"
     },
@@ -250,7 +250,7 @@ const abi = [
             }
         ],
         name: "Reveal",
-        outputs: [],
+        outputs: [ ],
         stateMutability: "nonpayable",
         type: "function"
     },
@@ -268,7 +268,7 @@ const abi = [
             }
         ],
         name: "approve",
-        outputs: [],
+        outputs: [ ],
         stateMutability: "nonpayable",
         type: "function"
     },
@@ -305,7 +305,7 @@ const abi = [
             }
         ],
         name: "batchTransfer",
-        outputs: [],
+        outputs: [ ],
         stateMutability: "nonpayable",
         type: "function"
     },
@@ -318,27 +318,14 @@ const abi = [
             }
         ],
         name: "changeLimit",
-        outputs: [],
+        outputs: [ ],
         stateMutability: "nonpayable",
         type: "function"
     },
     {
-        inputs: [
-            {
-                internalType: "uint256",
-                name: "newSaleTime",
-                type: "uint256"
-            }
-        ],
-        name: "changeTime",
-        outputs: [],
-        stateMutability: "nonpayable",
-        type: "function"
-    },
-    {
-        inputs: [],
+        inputs: [ ],
         name: "flipSaleStatus",
-        outputs: [],
+        outputs: [ ],
         stateMutability: "nonpayable",
         type: "function"
     },
@@ -386,7 +373,7 @@ const abi = [
         type: "function"
     },
     {
-        inputs: [],
+        inputs: [ ],
         name: "isMintOpen",
         outputs: [
             {
@@ -399,7 +386,7 @@ const abi = [
         type: "function"
     },
     {
-        inputs: [],
+        inputs: [ ],
         name: "limit",
         outputs: [
             {
@@ -412,7 +399,7 @@ const abi = [
         type: "function"
     },
     {
-        inputs: [],
+        inputs: [ ],
         name: "mintStatus",
         outputs: [
             {
@@ -425,7 +412,7 @@ const abi = [
         type: "function"
     },
     {
-        inputs: [],
+        inputs: [ ],
         name: "name",
         outputs: [
             {
@@ -438,7 +425,7 @@ const abi = [
         type: "function"
     },
     {
-        inputs: [],
+        inputs: [ ],
         name: "owner",
         outputs: [
             {
@@ -464,7 +451,7 @@ const abi = [
             }
         ],
         name: "ownerMint",
-        outputs: [],
+        outputs: [ ],
         stateMutability: "nonpayable",
         type: "function"
     },
@@ -507,9 +494,9 @@ const abi = [
         type: "function"
     },
     {
-        inputs: [],
+        inputs: [ ],
         name: "renounceOwnership",
-        outputs: [],
+        outputs: [ ],
         stateMutability: "nonpayable",
         type: "function"
     },
@@ -532,7 +519,7 @@ const abi = [
             }
         ],
         name: "safeTransferFrom",
-        outputs: [],
+        outputs: [ ],
         stateMutability: "nonpayable",
         type: "function"
     },
@@ -560,7 +547,7 @@ const abi = [
             }
         ],
         name: "safeTransferFrom",
-        outputs: [],
+        outputs: [ ],
         stateMutability: "nonpayable",
         type: "function"
     },
@@ -578,7 +565,7 @@ const abi = [
             }
         ],
         name: "setApprovalForAll",
-        outputs: [],
+        outputs: [ ],
         stateMutability: "nonpayable",
         type: "function"
     },
@@ -591,25 +578,12 @@ const abi = [
             }
         ],
         name: "setCollectionURI",
-        outputs: [],
+        outputs: [ ],
         stateMutability: "nonpayable",
         type: "function"
     },
     {
-        inputs: [
-            {
-                internalType: "string",
-                name: "newURI",
-                type: "string"
-            }
-        ],
-        name: "setRevealURI",
-        outputs: [],
-        stateMutability: "nonpayable",
-        type: "function"
-    },
-    {
-        inputs: [],
+        inputs: [ ],
         name: "startSale",
         outputs: [
             {
@@ -641,7 +615,7 @@ const abi = [
         type: "function"
     },
     {
-        inputs: [],
+        inputs: [ ],
         name: "symbol",
         outputs: [
             {
@@ -673,7 +647,7 @@ const abi = [
         type: "function"
     },
     {
-        inputs: [],
+        inputs: [ ],
         name: "totalSupply",
         outputs: [
             {
@@ -704,7 +678,7 @@ const abi = [
             }
         ],
         name: "transferFrom",
-        outputs: [],
+        outputs: [ ],
         stateMutability: "nonpayable",
         type: "function"
     },
@@ -717,14 +691,14 @@ const abi = [
             }
         ],
         name: "transferOwnership",
-        outputs: [],
+        outputs: [ ],
         stateMutability: "nonpayable",
         type: "function"
     },
     {
-        inputs: [],
+        inputs: [ ],
         name: "withdraw",
-        outputs: [],
+        outputs: [ ],
         stateMutability: "payable",
         type: "function"
     }
