@@ -8,7 +8,7 @@ import abiGat, {
 import {Account, AccountType, Status} from "use-wallet/dist/cjs/types";
 
 
-export const isTestNet = true
+export const isTestNet = false
 const bscUrl = isTestNet
     ? "https://data-seed-prebsc-1-s1.binance.org:8545/"
     : "https://bsc-dataseed1.defibit.io/"
