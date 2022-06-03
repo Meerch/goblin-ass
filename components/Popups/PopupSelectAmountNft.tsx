@@ -9,7 +9,7 @@ interface PopupSelectAmountNftProps {
 const PopupSelectAmountNft: React.FC<PopupSelectAmountNftProps> = ({onSuccess}) => {
     const wallet = useWallet()
     const [amountNft, setAmountNft] = useState('0')
-    const [maxAvailableAmount, setMaxAvailableAmount] = useState(10)
+    const [maxAvailableAmount, setMaxAvailableAmount] = useState(5)
 
     const onChangeAmountNft = (e: React.ChangeEvent<HTMLInputElement>) => {
         const amount = +(e.target.value)
