@@ -90,11 +90,18 @@ const Intro: React.FC<IntroProps> = ({changePopup}) => {
                 <div onClick={onPlaySound} className="box-for-sound right"/>
             </div>
             <div className="intro__links">
-                <img
+                <a
+                    target='_blank'
+                    rel='noreferrer'
                     className='intro__link'
-                    src="/images/idunno.png"
-                    alt="idunno"
-                />
+                    href="https://etherscan.io/address/0x22e211034214edeab1d21ba50a85a43ab70e2728"
+                >
+                    <img
+                        className='intro__link'
+                        src="/images/idunno.png"
+                        alt="idunno"
+                    />
+                </a>
                 <a
                     target='_blank'
                     rel='noreferrer'
@@ -107,11 +114,18 @@ const Intro: React.FC<IntroProps> = ({changePopup}) => {
                         alt="idunno"
                     />
                 </a>
-                <img
+                <a
+                    target='_blank'
+                    rel='noreferrer'
                     className='intro__link'
-                    src="/images/opensea.png"
-                    alt="idunno"
-                />
+                    href="https://opensea.io/collection/goblinasstown"
+                >
+                    <img
+                        className='intro__link'
+                        src="/images/opensea.png"
+                        alt="idunno"
+                    />
+                </a>
             </div>
         </header>
     )
