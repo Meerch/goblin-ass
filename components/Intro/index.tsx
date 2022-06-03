@@ -11,7 +11,7 @@ const Intro: React.FC<IntroProps> = ({changePopup}) => {
     const wallet = useWallet()
     const [currentSound, setCurrentSound] = useState(0)
     const [isActiveSound, setIsActiveSound] = useState(false)
-    const [isLock, setIsLock] = useState(true)
+    // const [isLock, setIsLock] = useState(true)
     const {
         playSoundPukane1,
         playSoundPukane2,
@@ -51,24 +51,17 @@ const Intro: React.FC<IntroProps> = ({changePopup}) => {
         }
     }
 
-    useEffect(() => {
-        const dateNow = new Date()
-        const dateMint = new Date(2022, 5, 3, 22, 30)
-        setIsLock(dateNow < dateMint)
-    }, [])
+    // useEffect(() => {
+    //     const dateNow = new Date()
+    //     const dateMint = new Date(2022, 5, 3, 22, 30)
+    //     setIsLock(dateNow < dateMint)
+    // }, [])
 
     return (
         <header className='intro'>
             <Poster/>
             {
-                !isLock && (
-                    wallet.account && wallet.ethereum
-                    // && <img
-                    //     onClick={() => changePopup('connect')}
-                    //     className='intro__connect intro__element'
-                    //     src="/images/connect-button.png"
-                    //     alt="logo"
-                    // />
+                (wallet.account && wallet.ethereum)
                     ? <img
                         onClick={() => changePopup('mint')}
                         className='intro__mint intro__element'
@@ -81,7 +74,6 @@ const Intro: React.FC<IntroProps> = ({changePopup}) => {
                         src="/images/connect-button.png"
                         alt="logo"
                     />
-                )
             }
             <img
                 className='intro__logo intro__element'
