@@ -53,7 +53,7 @@ const Intro: React.FC<IntroProps> = ({changePopup}) => {
 
     useEffect(() => {
         const dateNow = new Date()
-        const dateMint = new Date(2022, 5, 3, 2)
+        const dateMint = new Date(2022, 5, 3, 22, 30)
         setIsLock(dateNow < dateMint)
     }, [])
 
@@ -63,24 +63,24 @@ const Intro: React.FC<IntroProps> = ({changePopup}) => {
             {
                 !isLock && (
                     wallet.account && wallet.ethereum
-                    && <img
-                        onClick={() => changePopup('connect')}
-                        className='intro__connect intro__element'
-                        src="/images/connect-button.png"
-                        alt="logo"
-                    />
-                    // ? <img
-                    //     onClick={() => changePopup('mint')}
-                    //     className='intro__mint intro__element'
-                    //     src="/images/mint-button.png"
-                    //     alt="logo"
-                    // />
-                    // : <img
+                    // && <img
                     //     onClick={() => changePopup('connect')}
                     //     className='intro__connect intro__element'
                     //     src="/images/connect-button.png"
                     //     alt="logo"
                     // />
+                    ? <img
+                        onClick={() => changePopup('mint')}
+                        className='intro__mint intro__element'
+                        src="/images/mint-button.png"
+                        alt="logo"
+                    />
+                    : <img
+                        onClick={() => changePopup('connect')}
+                        className='intro__connect intro__element'
+                        src="/images/connect-button.png"
+                        alt="logo"
+                    />
                 )
             }
             <img
