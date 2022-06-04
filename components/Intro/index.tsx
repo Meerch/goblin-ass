@@ -114,18 +114,18 @@ const Intro: React.FC<IntroProps> = ({changePopup}) => {
                         alt="idunno"
                     />
                 </a>
-                <a
-                    target='_blank'
-                    rel='noreferrer'
-                    className='intro__link'
-                    href="https://opensea.io/collection/goblinasstown"
-                >
-                    <img
-                        className='intro__link'
-                        src="/images/opensea.png"
-                        alt="idunno"
-                    />
-                </a>
+                {/*<a*/}
+                {/*    target='_blank'*/}
+                {/*    rel='noreferrer'*/}
+                {/*    className='intro__link'*/}
+                {/*    href="https://opensea.io/collection/goblinasstown"*/}
+                {/*>*/}
+                {/*    <img*/}
+                {/*        className='intro__link'*/}
+                {/*        src="/images/opensea.png"*/}
+                {/*        alt="idunno"*/}
+                {/*    />*/}
+                {/*</a>*/}
             </div>
         </header>
     )

@@ -76,7 +76,7 @@
   }
 
   &__link {
-    top: 190px;
+    top: 240px;
     position: absolute;
 
     img {
@@ -91,21 +91,25 @@
     }
 
     &.looksrare {
-      left: 170px;
+      left: 180px;
 
       @media (min-width: 1400px) {
-        left: 180px;
+        left: 185px;
       }
     }
   }
 
-  .limit {
+  .trade {
     text-align: right;
-    top: 260px;
+    top: 190px;
+    left: 110px;
+    transform: rotate(-2deg);
   }
 
   .supply {
-    top: 355px;
+    top: 350px;
+    left: 100px;
+    transform: rotate(-2deg);
   }
 
   &__text {

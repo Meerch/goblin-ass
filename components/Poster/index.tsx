@@ -31,9 +31,9 @@ const Poster = () => {
             {/*    src="/images/looksreir.png"*/}
             {/*    alt=""*/}
             {/*/>*/}
-            <div className="poster__text el price">
-                Mint Price: <span className="poster__text-mark green">Free</span>
-            </div>
+            {/*<div className="poster__text el price">*/}
+            {/*    Mint Price: <span className="poster__text-mark green">Free</span>*/}
+            {/*</div>*/}
             <a
                 className='poster__link opensea'
                 href="https://opensea.io/collection/goblinasstown"
@@ -50,11 +50,11 @@ const Poster = () => {
             >
                 <img src="/images/looksrare.png" alt="Looksrare"/>
             </a>
-            {/*<div className="poster__text el limit">*/}
-            {/*    Mint Limit: <span className="poster__text-mark red">5</span> per<br/>wallet*/}
-            {/*</div>*/}
+            <div className="poster__text el trade">
+               Trade on
+            </div>
             <div className="poster__text el supply">
-                Max Supply: 8888
+                Supply: 8888
             </div>
 
         </div>
