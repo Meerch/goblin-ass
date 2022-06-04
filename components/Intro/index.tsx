@@ -60,21 +60,21 @@ const Intro: React.FC<IntroProps> = ({changePopup}) => {
     return (
         <header className='intro'>
             <Poster/>
-            {
-                (wallet.account && wallet.ethereum)
-                    ? <img
-                        onClick={() => changePopup('mint')}
-                        className='intro__mint intro__element'
-                        src="/images/mint-button.png"
-                        alt="logo"
-                    />
-                    : <img
-                        onClick={() => changePopup('connect')}
-                        className='intro__connect intro__element'
-                        src="/images/connect-button.png"
-                        alt="logo"
-                    />
-            }
+            {/*{*/}
+            {/*    (wallet.account && wallet.ethereum)*/}
+            {/*        ? <img*/}
+            {/*            onClick={() => changePopup('mint')}*/}
+            {/*            className='intro__mint intro__element'*/}
+            {/*            src="/images/mint-button.png"*/}
+            {/*            alt="logo"*/}
+            {/*        />*/}
+            {/*        : <img*/}
+            {/*            onClick={() => changePopup('connect')}*/}
+            {/*            className='intro__connect intro__element'*/}
+            {/*            src="/images/connect-button.png"*/}
+            {/*            alt="logo"*/}
+            {/*        />*/}
+            {/*}*/}
             <img
                 className='intro__logo intro__element'
                 src="/images/logo.png"
