@@ -25,12 +25,12 @@ const Poster = () => {
             {/*    alt="Mint is LIVE"*/}
             {/*/>*/}
             {/*// }*/}
-            <div className="poster__coming el over">Mint is <span className="mark">OVER</span></div>
-            {/*<img*/}
-            {/*    className='poster__coming el live'*/}
-            {/*    src="/images/looksreir.png"*/}
-            {/*    alt=""*/}
-            {/*/>*/}
+            {/*<div className="poster__coming el over">Mint is <span className="mark">OVER</span></div>*/}
+            <img
+                className='poster__coming el over'
+                src="/images/mint-is-over.png"
+                alt=""
+            />
             {/*<div className="poster__text el price">*/}
             {/*    Mint Price: <span className="poster__text-mark green">Free</span>*/}
             {/*</div>*/}
@@ -49,6 +49,15 @@ const Poster = () => {
                 target='_blank'
             >
                 <img src="/images/looksrare.png" alt="Looksrare"/>
+            </a>
+
+            <a
+                className='poster__link x2y2'
+                href="https://x2y2.io/collection/goblinasstown/items"
+                rel='noreferrer'
+                target='_blank'
+            >
+                <img src="/images/x2y2.png" alt="X2Y2"/>
             </a>
             <div className="poster__text el trade">
                Trade on

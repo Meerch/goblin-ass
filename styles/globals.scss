@@ -85,16 +85,20 @@
     }
 
     &.opensea {
-      left: 90px;
+      left: 65px;
       width: 64px;
       height: 65px;
     }
 
+    &.x2y2 {
+      left: 145px;
+    }
+
     &.looksrare {
-      left: 180px;
+      left: 215px;
 
       @media (min-width: 1400px) {
-        left: 185px;
+        left: 220px;
       }
     }
   }
